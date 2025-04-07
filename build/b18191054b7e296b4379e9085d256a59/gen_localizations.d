@@ -1,0 +1,1 @@
+ /Users/xander9112/dev/mobile/quiz/.dart_tool/flutter_gen/gen_l10n/app_localizations_en.dart /Users/xander9112/dev/mobile/quiz/.dart_tool/flutter_gen/gen_l10n/app_localizations.dart:  /Users/xander9112/dev/mobile/quiz/l10n.yaml /Users/xander9112/dev/mobile/quiz/lib/src/localization/app_en.arb
