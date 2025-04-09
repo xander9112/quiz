@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		vywoUuAISWVS1/ITIUmApIVjwj4=
+		vIBB3igjwkY9FEsS+OE5pwlUGZU=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		sA8Hr+ZvVN45sZ1Epssf5c037eo=
+		OQAG4CRQGDQzyB1LXyLLn8hQb9o=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,27 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		X+cvUByyYEnrJRKY8ManVmqzMcs=
+		iZfXr7K5pZqCh1GW2wgedO7TaiM=
+		</data>
+		<key>flutter_assets/assets/animations/fail.json</key>
+		<data>
+		kSAJ0u1RB/FJC4LyMca8nWUnwOI=
+		</data>
+		<key>flutter_assets/assets/animations/fireworks.json</key>
+		<data>
+		yDybY0FCYM+dvOwnoIBOZlfykcU=
+		</data>
+		<key>flutter_assets/assets/animations/portal.json</key>
+		<data>
+		t2IOXG7yVe5yeN2RDf4+voa5Q94=
+		</data>
+		<key>flutter_assets/assets/audio/win.wav</key>
+		<data>
+		rqVWQpkA2inP2N+FujkPSc0DNN4=
+		</data>
+		<key>flutter_assets/assets/audio/wrong-answer.wav</key>
+		<data>
+		X7wYCRezPT2CuJoKQJVOc9vosu0=
 		</data>
 		<key>flutter_assets/assets/images/2.0x/flutter_logo.png</key>
 		<data>
@@ -31,6 +51,10 @@
 		<key>flutter_assets/assets/images/3.0x/flutter_logo.png</key>
 		<data>
 		URIqJlAOM/qejwuIf5bwKjMOSaM=
+		</data>
+		<key>flutter_assets/assets/images/bg.png</key>
+		<data>
+		/BmCamyKCqCtA7xfNmTwqnct8BA=
 		</data>
 		<key>flutter_assets/assets/images/flutter_logo.png</key>
 		<data>
@@ -43,6 +67,10 @@
 		<key>flutter_assets/assets/questions.json</key>
 		<data>
 		gn8JQVnm6xCwr9HVa7Bi+OTeWHc=
+		</data>
+		<key>flutter_assets/assets/svg/neonchik.svg</key>
+		<data>
+		jJ5dKss70LPHt9f8idS05EYfxm8=
 		</data>
 		<key>flutter_assets/assets/ui_schema.json</key>
 		<data>
@@ -58,7 +86,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		aeKUpAD3XccWc/orVjZE4lqemfM=
+		P01XF5wAW+4xFPxj0ov9gocwonE=
 		</data>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -75,14 +103,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yOoFDUN9SkI63PN5uqKJo9NhAKEfialBbtyX7fRZeDs=
+			UsNzxOwIq4f9mgctRyld1Uy/Wud7Wylx/POjZkslJmQ=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J6Cb+CwMPWAL6w33KcEmsKe+61IcKYrce7XGuxqGVqw=
+			iGPxJ9rCv3QdlyrXfx+AELwzRQz8SeVpIItI3uLcyLw=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -96,7 +124,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lg4VD960WO8m+lsC9qAlfIQ0f16EWs5o66cUSKShJOE=
+			1KsmE1WeONfA95GUn1JnpT1dw7pMuqqbZ3IOa5iyiO8=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/animations/fail.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			paMabPnPuITdyyOHZW/H/yXre69lQjpITOcd73n1Tfs=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/animations/fireworks.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7Zxiw4qDF6SxmQjn69N0Je35mJAZxeYWE4LgI3SjLBI=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/animations/portal.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tZ0AbIsY5G3tFKlOly+XEKFEVGRiBXPL9FKBOtVpFbE=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/audio/win.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			h2ViMcD1RhqAwQGGbMaR+fFX5ha0MMlUfuge7vnPB3c=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/audio/wrong-answer.wav</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3piqwEyo99SlZBZvoL8pSkCcBedPR4axV7yOdHsyKp8=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/2.0x/flutter_logo.png</key>
@@ -111,6 +174,13 @@
 			<key>hash2</key>
 			<data>
 			427KBrJEB0i9/B5Hgf4RkNsQ2zG6TkhczkEaDw7mYb8=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/images/bg.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gvIPRiTezcEgH+m4EE+oRXjAKBGVDdKxo4qz1m4U1KA=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/images/flutter_logo.png</key>
@@ -132,6 +202,13 @@
 			<key>hash2</key>
 			<data>
 			lS7MyAS+4GSY+zgjz7he3Po6RsxZTd46UMMH11g+rXI=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/svg/neonchik.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Hu7Qur9qM+3DeLBjYxoYINkc8IUNRuL7P7kVdzGQ+Fg=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/ui_schema.json</key>
@@ -159,7 +236,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1FALnEHZZE+z+6edHzlD34EMSXGFwi1e/mV7ggKJWCM=
+			x8+DRDhQtpUaLGjPVp0rBYqWu9AiUADFc8TdEtFoifg=
 			</data>
 		</dict>
 		<key>flutter_assets/shaders/ink_sparkle.frag</key>
