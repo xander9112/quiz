@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/src/quiz/_quiz.dart';
-import 'package:reactive_forms_json_scheme/reactive_forms_json_scheme.dart';
 
 class QuizPage extends StatefulWidget {
   const QuizPage({super.key});
@@ -10,7 +9,7 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  late JsonForms jsonForm;
+  late List<QuizDTO> questions;
   bool loading = true;
 
   @override
@@ -21,10 +20,8 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   Future<void> _getData() async {
-    final schema = await LocalQuizSource().getJsonSchema();
-    final uiSchema = await LocalQuizSource().getUiSchema();
+    questions = await LocalQuizSource().getQuestions();
 
-    jsonForm = JsonFormsReactive(schema, uiSchema, {}, [], (data) {});
     loading = false;
 
     setState(() {});
@@ -41,7 +38,21 @@ class _QuizPageState extends State<QuizPage> {
 
     return Scaffold(
       appBar: AppBar(),
-      body: jsonForm.getFormWidget(context),
+      body: PageView.builder(
+        itemCount: questions.length,
+        itemBuilder: (context, index) {
+          final question = questions.elementAt(index);
+
+          return Column(
+            children: [
+              Text(question.title),
+              ...question.answers.map(
+                (e) => Text(e.title),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }

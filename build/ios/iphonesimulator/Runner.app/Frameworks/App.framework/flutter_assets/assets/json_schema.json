@@ -1,62 +1,123 @@
 {
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
-    "required": [
-        "age"
-    ],
     "properties": {
-        "firstName": {
-            "type": "string",
-            "minLength": 2,
-            "maxLength": 20
-        },
-        "lastName": {
-            "type": "string",
-            "minLength": 5,
-            "maxLength": 15
-        },
-        "age": {
-            "type": "integer",
-            "minimum": 18,
-            "maximum": 100
-        },
-        "gender": {
+        "development_centers_count": {
             "type": "string",
             "enum": [
-                "Male",
-                "Female",
-                "Undisclosed"
+                "6",
+                "7",
+                "8",
+                "9"
             ]
         },
-        "height": {
-            "type": "number"
-        },
-        "dateOfBirth": {
+        "spring_launch_2025_directions": {
             "type": "string",
-            "format": "date"
+            "enum": [
+                "7",
+                "8",
+                "9",
+                "10"
+            ]
         },
-        "rating": {
-            "type": "integer"
+        "training_duration_weeks": {
+            "type": "string",
+            "enum": [
+                "3 недели",
+                "1.5 месяца",
+                "3.5 месяца",
+                "6 месяцев"
+            ]
         },
-        "committer": {
-            "type": "boolean"
+        "training_programs": {
+            "type": "string",
+            "enum": [
+                "Data Engineer",
+                "Application security",
+                "System Engineer",
+                "DevOps Engineer"
+            ]
         },
-        "address": {
-            "type": "object",
-            "properties": {
-                "street": {
-                    "type": "string"
-                },
-                "number": {
-                    "type": "number"
-                },
-                "postalCode": {
-                    "type": "integer"
-                },
-                "city": {
-                    "type": "string"
-                }
+        "employee_count": {
+            "type": "string",
+            "description": "Количество сотрудников в компании Neoflex",
+            "enum": [
+                "800+",
+                "1200",
+                "2000",
+                "1400+"
+            ]
+        },
+        "training_type": {
+            "type": "string",
+            "description": "Тип обучения в учебном центре Neoflex",
+            "enum": [
+                "Платное",
+                "Предоставляются скидки студентам",
+                "Бесплатное, в случае дальнейшего трудоустройства в компанию",
+                "Бесплатное"
+            ]
+        },
+        "office_city": {
+            "type": "array",
+            "description": "Города, где есть офис компании",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Пенза",
+                    "Самара",
+                    "Нижний Новгород",
+                    "Воронеж"
+                ]
             }
+        },
+        "company_activities": {
+            "type": "array",
+            "description": "Виды деятельности компании",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Рисками и отчётностью",
+                    "Разработкой приложений",
+                    "Кибербезопасностью",
+                    "Микросервисами"
+                ]
+            }
+        },
+        "clients": {
+            "type": "array",
+            "description": "Клиенты компании",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "Вкусно и точка",
+                    "ВТБ-банк",
+                    "Лента",
+                    "Альфа-банк",
+                    "Магнит",
+                    "Т-банк",
+                    "X5 Group"
+                ]
+            }
+        },
+        "company_age": {
+            "type": "string",
+            "description": "Возраст компании Neoflex",
+            "enum": [
+                "5",
+                "10",
+                "15",
+                "20"
+            ]
+        },
+        "desire_to_join_team": {
+            "type": "string",
+            "description": "Желание стать частью команды Neoflex",
+            "enum": [
+                "Да",
+                "Конечно",
+                "Возможно"
+            ]
         }
     }
 }

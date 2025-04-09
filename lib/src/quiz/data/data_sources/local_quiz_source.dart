@@ -1,35 +1,35 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:quiz/src/quiz/domain/models/quiz/quiz_dto.dart';
 
 class LocalQuizSource {
-  Future<Map<String, dynamic>> _loadJsonFromFile(String fileName) async {
+  Future<dynamic> _loadJsonFromFile(String fileName) async {
     try {
       final String fileContent =
           await rootBundle.loadString('assets/$fileName.json');
 
-      final Map<String, dynamic> jsonData =
-          jsonDecode(fileContent) as Map<String, dynamic>;
-
-      return jsonData;
+      return jsonDecode(fileContent);
     } catch (e) {
       rethrow;
     }
   }
 
-  Future<Map<String, dynamic>> getJsonSchema([
-    String name = 'json_schema',
+  Future<List<QuizDTO>> getQuestions([
+    String name = 'questions',
   ]) async {
     final response = await _loadJsonFromFile(name);
 
-    return response;
-  }
+    try {
+      return (response as List)
+          .map(
+            (e) => QuizDTO.fromMap(e as Map<String, dynamic>),
+          )
+          .toList();
+    } on Exception catch (error) {
+      print(error);
 
-  Future<Map<String, dynamic>> getUiSchema([
-    String name = 'ui_schema',
-  ]) async {
-    final response = await _loadJsonFromFile(name);
-
-    return response;
+      return [];
+    }
   }
 }
