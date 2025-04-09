@@ -37,7 +37,6 @@ class _QuizPageState extends State<QuizPage> {
     }
 
     return Scaffold(
-      appBar: AppBar(),
       body: PageView.builder(
         itemCount: questions.length,
         itemBuilder: (context, index) {
@@ -45,9 +44,19 @@ class _QuizPageState extends State<QuizPage> {
 
           return Column(
             children: [
-              Text(question.title),
+              /* Text(question.title),
               ...question.answers.map(
                 (e) => Text(e.title),
+              ),*/
+              Expanded(
+                child: NeonchikQuiz(
+                  title: question.title,
+                  answers: question.answers,
+                  key: ValueKey(index),
+                  onPressed: (value) async {
+                    return value == 'C';
+                  },
+                ),
               ),
             ],
           );

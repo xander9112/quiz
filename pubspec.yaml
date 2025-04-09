@@ -10,10 +10,13 @@ environment:
   sdk: ^3.6.2
 
 dependencies:
+  audioplayers: ^6.4.0
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.17
+  lottie: ^3.3.1
   reactive_forms_json_scheme:
     git:
       url: git@github.com:xander9112/reactive_json_scheme_builder.git
@@ -35,3 +38,6 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/
     - assets/images/
+    - assets/svg/
+    - assets/audio/
+    - assets/animations/
