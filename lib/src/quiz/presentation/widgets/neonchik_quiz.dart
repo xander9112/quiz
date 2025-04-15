@@ -4,7 +4,6 @@ import 'dart:math';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:lottie/lottie.dart';
 import 'package:quiz/src/quiz/_quiz.dart';
 
 class NeonchikQuiz extends StatefulWidget {
@@ -219,312 +218,231 @@ class _NeonchikQuizState extends State<NeonchikQuiz>
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 800),
-        child: Stack(
+    return Stack(
+      children: [
+        Column(
           children: [
-            Column(
-              children: [
-                Expanded(
-                  child: Stack(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage('assets/images/bg.png'),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage('assets/images/bg.png'),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: MediaQuery.viewPaddingOf(context).top,
-                              ),
-                              Text(
-                                widget.title,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                ),
-                              ),
-                              for (int i = 0; i < widget.answers.length; i++)
-                                Text(
-                                  '${answers[i]}. ${widget.answers[i].title}',
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: LayoutBuilder(
-                          builder: (context, constraints) {
-                            return Stack(
-                              children: [
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image:
-                                            AssetImage('assets/images/bg.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                AnimatedBuilder(
-                                  animation: _controller1,
-                                  builder: (context, _) {
-                                    return Align(
-                                      alignment: Alignment.center.add(
-                                        Alignment(
-                                          0,
-                                          Curves.bounceIn.transform(
-                                                _controller1.value,
-                                              ) *
-                                              5,
-                                        ),
-                                      ),
-                                      child: NeonchikAnswer(
-                                        onPressed: () {
-                                          onPressedAnswer(answer1);
-                                        },
-                                        answer: answer1,
-                                        width: constraints.maxWidth * 0.3,
-                                      ),
-                                    );
-                                  },
-                                ),
-                                IgnorePointer(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Lottie.asset(
-                                      'assets/animations/portal.json',
-                                      width: constraints.maxWidth * 0.6,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        ),
-                      ),
-                      Expanded(
-                        child: LayoutBuilder(
-                          builder: (context, constraints) {
-                            return Stack(
-                              children: [
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image:
-                                            AssetImage('assets/images/bg.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                AnimatedBuilder(
-                                  animation: _controller2,
-                                  builder: (context, _) {
-                                    return Align(
-                                      alignment: Alignment.center
-                                          .add(const Alignment(0, -0.1)),
-                                      child: Opacity(
-                                        opacity: Curves.easeInOutCirc
-                                            .transform(_controller2.value),
-                                        child: NeonchikAnswer(
-                                          answer: answer2,
-                                          onPressed: () {
-                                            onPressedAnswer(answer2);
-                                          },
-                                          width: constraints.maxWidth * 0.3,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                                IgnorePointer(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter
-                                        .add(const Alignment(0, -0.8)),
-                                    child: Lottie.asset(
-                                      'assets/animations/portal.json',
-                                      width: constraints.maxWidth * 0.6,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: LayoutBuilder(
-                          builder: (context, constraints) {
-                            return Stack(
-                              children: [
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image:
-                                            AssetImage('assets/images/bg.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                AnimatedBuilder(
-                                  animation: _controller3,
-                                  builder: (context, _) {
-                                    return Align(
-                                      alignment: Alignment.center.add(
-                                        Alignment(
-                                          0,
-                                          Curves.easeIn.transform(
-                                                _controller3.value,
-                                              ) -
-                                              0.1 * 5,
-                                        ),
-                                      ),
-                                      child: Transform.scale(
-                                        scale: 1 - _controller3.value,
-                                        child: NeonchikAnswer(
-                                          answer: answer3,
-                                          onPressed: () {
-                                            onPressedAnswer(answer3);
-                                          },
-                                          width: constraints.maxWidth * 0.5,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                                IgnorePointer(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter
-                                        .add(const Alignment(0, -0.8)),
-                                    child: Lottie.asset(
-                                      'assets/animations/portal.json',
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        ),
-                      ),
-                      Expanded(
-                        child: LayoutBuilder(
-                          builder: (context, constraints) {
-                            return Stack(
-                              children: [
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image:
-                                            AssetImage('assets/images/bg.png'),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                AnimatedBuilder(
-                                  animation: _controller4,
-                                  builder: (context, _) {
-                                    return Align(
-                                      alignment: Alignment.center.add(
-                                        Alignment(
-                                          0,
-                                          Curves.easeIn.transform(
-                                                _controller4.value,
-                                              ) *
-                                              5,
-                                        ),
-                                      ),
-                                      child: Transform.rotate(
-                                        angle: _controller4.value * 2 * pi,
-                                        child: NeonchikAnswer(
-                                          onPressed: () {
-                                            onPressedAnswer(answer4);
-                                          },
-                                          answer: answer4,
-                                          width: constraints.maxWidth * 0.5,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                                IgnorePointer(
-                                  child: Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Lottie.asset(
-                                      'assets/animations/portal.json',
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            Expanded(
+              flex: 3,
+              child: NeonchikQuizHeader(
+                title: widget.title,
+                answers: widget.answers,
+              ),
             ),
-            if (fail)
-              Positioned.fill(
-                child: Lottie.asset('assets/animations/fail.json'),
+            Expanded(
+              flex: 2,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Stack(
+                          children: [
+                            Positioned.fill(
+                              child: Container(
+                                decoration: bgDecoration,
+                              ),
+                            ),
+                            AnimatedBuilder(
+                              animation: _controller1,
+                              builder: (context, _) {
+                                return Align(
+                                  alignment: Alignment.center.add(
+                                    Alignment(
+                                      0,
+                                      Curves.bounceIn.transform(
+                                            _controller1.value,
+                                          ) *
+                                          5,
+                                    ),
+                                  ),
+                                  child: NeonchikAnswer(
+                                    onPressed: () {
+                                      onPressedAnswer(answer1);
+                                    },
+                                    answer: answer1,
+                                    width: constraints.maxWidth * 0.3,
+                                  ),
+                                );
+                              },
+                            ),
+                            IgnorePointer(
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: LottieAnimation(
+                                  width: constraints.maxWidth * 0.6,
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Stack(
+                          children: [
+                            Positioned.fill(
+                              child: Container(
+                                decoration: bgDecoration,
+                              ),
+                            ),
+                            AnimatedBuilder(
+                              animation: _controller2,
+                              builder: (context, _) {
+                                return Align(
+                                  alignment: Alignment.center
+                                      .add(const Alignment(0, -0.1)),
+                                  child: Opacity(
+                                    opacity: Curves.easeInOutCirc
+                                        .transform(_controller2.value),
+                                    child: NeonchikAnswer(
+                                      answer: answer2,
+                                      onPressed: () {
+                                        onPressedAnswer(answer2);
+                                      },
+                                      width: constraints.maxWidth * 0.3,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            IgnorePointer(
+                              child: Align(
+                                alignment: Alignment.bottomCenter
+                                    .add(const Alignment(0, -0.8)),
+                                child: LottieAnimation(
+                                  width: constraints.maxWidth * 0.6,
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
-            if (congratulation)
-              Positioned.fill(
-                child: Lottie.asset('assets/animations/fireworks.json'),
+            ),
+            Expanded(
+              flex: 2,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Stack(
+                          children: [
+                            Positioned.fill(
+                              child: Container(
+                                decoration: bgDecoration,
+                              ),
+                            ),
+                            AnimatedBuilder(
+                              animation: _controller3,
+                              builder: (context, _) {
+                                return Align(
+                                  alignment: Alignment.center.add(
+                                    Alignment(
+                                      0,
+                                      Curves.easeIn.transform(
+                                            _controller3.value,
+                                          ) -
+                                          0.1 * 5,
+                                    ),
+                                  ),
+                                  child: Transform.scale(
+                                    scale: 1 - _controller3.value,
+                                    child: NeonchikAnswer(
+                                      answer: answer3,
+                                      onPressed: () {
+                                        onPressedAnswer(answer3);
+                                      },
+                                      width: constraints.maxWidth * 0.5,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            IgnorePointer(
+                              child: Align(
+                                alignment: Alignment.bottomCenter
+                                    .add(const Alignment(0, -0.8)),
+                                child: const LottieAnimation(),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return Stack(
+                          children: [
+                            Positioned.fill(
+                              child: Container(
+                                decoration: bgDecoration,
+                              ),
+                            ),
+                            AnimatedBuilder(
+                              animation: _controller4,
+                              builder: (context, _) {
+                                return Align(
+                                  alignment: Alignment.center.add(
+                                    Alignment(
+                                      0,
+                                      Curves.easeIn.transform(
+                                            _controller4.value,
+                                          ) *
+                                          5,
+                                    ),
+                                  ),
+                                  child: Transform.rotate(
+                                    angle: _controller4.value * 2 * pi,
+                                    child: NeonchikAnswer(
+                                      onPressed: () {
+                                        onPressedAnswer(answer4);
+                                      },
+                                      answer: answer4,
+                                      width: constraints.maxWidth * 0.5,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            const IgnorePointer(
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: LottieAnimation(),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
+            ),
           ],
         ),
-      ),
+        if (fail)
+          const Positioned.fill(
+            child: LottieAnimation(
+              type: LottieType.fail,
+            ),
+          ),
+        if (congratulation)
+          const Positioned.fill(
+            child: LottieAnimation(
+              type: LottieType.fireworks,
+            ),
+          ),
+      ],
     );
   }
 

@@ -73,27 +73,27 @@
     },
     {
         "code": "training_programs",
-        "title": "По каким программам обучают в учебном центре?",
+        "title": "По какой программе не обучают в учебном центре?",
         "answers": [
             {
                 "code": "A",
-                "title": "Data Engineer"
+                "title": "Data\nEngineer"
             },
             {
                 "code": "B",
-                "title": "Application security"
+                "title": "Application\nsecurity"
             },
             {
                 "code": "C",
-                "title": "System Engineer"
+                "title": "System\nEngineer"
             },
             {
                 "code": "D",
-                "title": "DevOps Engineer"
+                "title": "Marketing"
             }
         ],
-        "multiple": true,
-        "answer": "A,C,D"
+        "multiple": false,
+        "answer": "D"
     },
     {
         "code": "employee_count",
@@ -145,7 +145,7 @@
     },
     {
         "code": "office_city",
-        "title": "Города, где есть офис компании?",
+        "title": "Город, где нет офиса компании?",
         "answers": [
             {
                 "code": "A",
@@ -157,75 +157,15 @@
             },
             {
                 "code": "C",
-                "title": "Нижний Новгород"
+                "title": "Сочи"
             },
             {
                 "code": "D",
-                "title": "Воронеж"
+                "title": "Саратов"
             }
         ],
-        "multiple": true,
-        "answer": "A,B,C,D"
-    },
-    {
-        "code": "company_activities",
-        "title": "Виды деятельности компании?",
-        "answers": [
-            {
-                "code": "A",
-                "title": "Рисками и отчётностью"
-            },
-            {
-                "code": "B",
-                "title": "Разработкой приложений"
-            },
-            {
-                "code": "C",
-                "title": "Кибербезопасностью"
-            },
-            {
-                "code": "D",
-                "title": "Микросервисами"
-            }
-        ],
-        "multiple": true,
-        "answer": "A,B,D"
-    },
-    {
-        "code": "clients",
-        "title": "Клиенты компании?",
-        "answers": [
-            {
-                "code": "A",
-                "title": "Вкусно и точка"
-            },
-            {
-                "code": "B",
-                "title": "ВТБ-банк"
-            },
-            {
-                "code": "C",
-                "title": "Лента"
-            },
-            {
-                "code": "D",
-                "title": "Альфа-банк"
-            },
-            {
-                "code": "E",
-                "title": "Магнит"
-            },
-            {
-                "code": "F",
-                "title": "Т-банк"
-            },
-            {
-                "code": "G",
-                "title": "X5 Group"
-            }
-        ],
-        "multiple": true,
-        "answer": "A,B,C,D,E,F,G"
+        "multiple": false,
+        "answer": "C"
     },
     {
         "code": "company_age",
@@ -269,6 +209,6 @@
             }
         ],
         "multiple": false,
-        "answer": "A,B"
+        "answer": "B"
     }
 ]
