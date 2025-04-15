@@ -105,19 +105,13 @@ class _QuizPageState extends State<QuizPage> {
           itemBuilder: (context, index) {
             final question = questions.elementAt(index);
 
-            return Column(
-              children: [
-                Expanded(
-                  child: NeonchikQuiz(
-                    title: question.title,
-                    answers: question.answers,
-                    key: ValueKey(index),
-                    onPressed: (value) async {
-                      return _onSubmit(question, value);
-                    },
-                  ),
-                ),
-              ],
+            return NeonchikQuiz(
+              title: question.title,
+              answers: question.answers,
+              key: ValueKey(index),
+              onPressed: (value) async {
+                return _onSubmit(question, value);
+              },
             );
           },
         ),
