@@ -72,8 +72,8 @@ class NeonchikQuizHeader extends StatelessWidget {
                           delay:
                               timeToShowAnswer.inMilliseconds.ms + (i * 300).ms,
                         )
-                        .fadeIn(duration: 500.ms)
-                        .moveY(begin: 30, end: 0, duration: 500.ms);
+                        .fadeIn(duration: 600.ms)
+                        .moveY(begin: 30, end: 0, duration: 600.ms);
                   },
                 ).toList(),
               ),

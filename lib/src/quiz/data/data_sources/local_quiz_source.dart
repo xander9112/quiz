@@ -26,9 +26,7 @@ class LocalQuizSource {
             (e) => QuizDTO.fromMap(e as Map<String, dynamic>),
           )
           .toList();
-    } on Exception catch (error) {
-      print(error);
-
+    } on Exception catch (_) {
       return [];
     }
   }

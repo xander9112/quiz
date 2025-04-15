@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, avoid_equals_and_hash_code_on_mutable_classes
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -11,6 +10,23 @@ class QuizDTO {
     this.multiple = false,
     this.answers = const [],
   });
+
+  factory QuizDTO.fromMap(Map<String, dynamic> map) {
+    return QuizDTO(
+      code: map['code'] as String,
+      title: map['title'] as String,
+      answer: map['answer'] as String,
+      multiple: map['multiple'] as bool,
+      answers: List<QuizDTOAnswer>.from(
+        (map['answers'] as List<dynamic>).map<QuizDTOAnswer>(
+          (x) => QuizDTOAnswer.fromMap(x as Map<String, dynamic>),
+        ),
+      ),
+    );
+  }
+
+  factory QuizDTO.fromJson(String source) =>
+      QuizDTO.fromMap(json.decode(source) as Map<String, dynamic>);
 
   final String code;
   final String title;
@@ -44,24 +60,7 @@ class QuizDTO {
     };
   }
 
-  factory QuizDTO.fromMap(Map<String, dynamic> map) {
-    return QuizDTO(
-      code: map['code'] as String,
-      title: map['title'] as String,
-      answer: map['answer'] as String,
-      multiple: map['multiple'] as bool,
-      answers: List<QuizDTOAnswer>.from(
-        (map['answers'] as List<dynamic>).map<QuizDTOAnswer>(
-          (x) => QuizDTOAnswer.fromMap(x as Map<String, dynamic>),
-        ),
-      ),
-    );
-  }
-
   String toJson() => json.encode(toMap());
-
-  factory QuizDTO.fromJson(String source) =>
-      QuizDTO.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -95,6 +94,16 @@ class QuizDTOAnswer {
     required this.title,
   });
 
+  factory QuizDTOAnswer.fromMap(Map<String, dynamic> map) {
+    return QuizDTOAnswer(
+      code: map['code'] as String,
+      title: map['title'] as String,
+    );
+  }
+
+  factory QuizDTOAnswer.fromJson(String source) =>
+      QuizDTOAnswer.fromMap(json.decode(source) as Map<String, dynamic>);
+
   final String code;
   final String title;
 
@@ -115,17 +124,7 @@ class QuizDTOAnswer {
     };
   }
 
-  factory QuizDTOAnswer.fromMap(Map<String, dynamic> map) {
-    return QuizDTOAnswer(
-      code: map['code'] as String,
-      title: map['title'] as String,
-    );
-  }
-
   String toJson() => json.encode(toMap());
-
-  factory QuizDTOAnswer.fromJson(String source) =>
-      QuizDTOAnswer.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() => 'QuizDTOAnswer(code: $code, title: $title)';
