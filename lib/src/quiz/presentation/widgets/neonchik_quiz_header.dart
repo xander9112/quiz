@@ -14,8 +14,8 @@ class NeonchikQuizHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: bgDecoration,
+    return Container(
+      // decoration: bgDecoration,
       child: Padding(
         padding: EdgeInsets.fromLTRB(
           16,

@@ -97,27 +97,30 @@ class _QuizPageState extends State<QuizPage> {
     }
 
     return Scaffold(
-      body: PageView.builder(
-        controller: _pageController,
-        itemCount: questions.length,
-        itemBuilder: (context, index) {
-          final question = questions.elementAt(index);
+      body: Container(
+        decoration: bgDecoration,
+        child: PageView.builder(
+          controller: _pageController,
+          itemCount: questions.length,
+          itemBuilder: (context, index) {
+            final question = questions.elementAt(index);
 
-          return Column(
-            children: [
-              Expanded(
-                child: NeonchikQuiz(
-                  title: question.title,
-                  answers: question.answers,
-                  key: ValueKey(index),
-                  onPressed: (value) async {
-                    return _onSubmit(question, value);
-                  },
+            return Column(
+              children: [
+                Expanded(
+                  child: NeonchikQuiz(
+                    title: question.title,
+                    answers: question.answers,
+                    key: ValueKey(index),
+                    onPressed: (value) async {
+                      return _onSubmit(question, value);
+                    },
+                  ),
                 ),
-              ),
-            ],
-          );
-        },
+              ],
+            );
+          },
+        ),
       ),
     );
   }
