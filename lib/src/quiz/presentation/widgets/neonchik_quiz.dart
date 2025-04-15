@@ -240,8 +240,8 @@ class _NeonchikQuizState extends State<NeonchikQuiz>
                           children: [
                             Positioned.fill(
                               child: Container(
-                                  // decoration: bgDecoration,
-                                  ),
+                                decoration: bgDecoration,
+                              ),
                             ),
                             AnimatedBuilder(
                               animation: _controller1,
@@ -286,8 +286,8 @@ class _NeonchikQuizState extends State<NeonchikQuiz>
                           children: [
                             Positioned.fill(
                               child: Container(
-                                  // decoration: bgDecoration,
-                                  ),
+                                decoration: bgDecoration,
+                              ),
                             ),
                             AnimatedBuilder(
                               animation: _controller2,
@@ -337,8 +337,8 @@ class _NeonchikQuizState extends State<NeonchikQuiz>
                           children: [
                             Positioned.fill(
                               child: Container(
-                                  // decoration: bgDecoration,
-                                  ),
+                                decoration: bgDecoration,
+                              ),
                             ),
                             AnimatedBuilder(
                               animation: _controller3,
@@ -385,8 +385,8 @@ class _NeonchikQuizState extends State<NeonchikQuiz>
                           children: [
                             Positioned.fill(
                               child: Container(
-                                  // decoration: bgDecoration,
-                                  ),
+                                decoration: bgDecoration,
+                              ),
                             ),
                             AnimatedBuilder(
                               animation: _controller4,
